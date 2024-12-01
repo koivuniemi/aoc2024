@@ -40,5 +40,7 @@ int main(int argc, char** argv)
 
 	printf("%d\n", similarity_score);
 
+	free(list0);
+	free(list1);
 	return 0;
 }
