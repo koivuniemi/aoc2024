@@ -31,6 +31,10 @@ int main(int argc, char** argv)
 	int* list0;
 	int* list1;
 	int len = scan(&list0, &list1, argv[1]);
+	if (len == 0) {
+		fprintf(stderr, "file '%s' does not exist\n", argv[1]);
+		return 1;
+	}
 
 	sort_list(list1, len);
 
